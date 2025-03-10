@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Login Form</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #2e2e2e, #1c1c1c);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 15px 15px 30px #141414, -15px -15px 30px #2a2a2a,
+                        inset 4px 4px 10px rgba(255, 255, 255, 0.05),
+                        inset -4px -4px 10px rgba(0, 0, 0, 0.6);
+            width: 350px;
+            text-align: center;
+        }
+
+        .input-container {
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .input {
+            width: calc(100% - 30px);
+            height: 50px;
+            border: none;
+            outline: none;
+            padding: 0 15px;
+            border-radius: 10px;
+            background-color: #252525;
+            color: #fff;
+            font-size: 16px;
+            box-shadow: inset 5px 5px 15px #141414, 
+                        inset -5px -5px 15px #2a2a2a;
+        }
+
+        .input:focus,
+        .input:valid {
+            border: 2px solid #3b3b3b;
+            box-shadow: inset 4px 4px 15px #141414, 
+                        inset -4px -4px 15px #2a2a2a;
+        }
+
+        .label {
+            position: absolute;
+            top: 14px;
+            left: 15px;
+            color: #666;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .input:focus ~ .label,
+        .input:valid ~ .label {
+            transform: translate(-10px, -30px);
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        .btn {
+            background: linear-gradient(145deg, #3b3b3b, #292929);
+            border: none;
+            color: white;
+            padding: 12px 0;
+            border-radius: 10px;
+            width: 100%;
+            cursor: pointer;
+            box-shadow: 8px 8px 20px #141414, -8px -8px 20px #2a2a2a;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(145deg, #4a4a4a, #3a3a3a);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <div class="input-container">
+            <input required type="text" name="username" class="input" />
+            <label class="label">Username</label>
+        </div>
+        <div class="input-container">
+            <input required type="password" name="password" class="input" />
+            <label class="label">Password</label>
+        </div>
+        <button class="btn">Login</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+body {
+  background-color: #121212; /* Dark background */
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  background: #1e1e1e; /* Dark grey button */
+  padding: 1.4em;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.8),
+              -6px -6px 10px -1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.5s;
+  margin: auto 20px;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.9),
+              inset -4px -4px 6px -1px rgba(255, 255, 255, 0.1),
+              -0.5px -0.5px 0px rgba(255, 255, 255, 0.1),
+              0.5px 0.5px 0px rgba(0, 0, 0, 0.8),
+              0px 12px 10px -10px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(0.5em);
+}
+
+.btn svg {
+  transition: transform 0.5s;
+  fill: #4A90E2; /* Vibrant blue for visibility */
+}
+
+.btn:hover svg {
+  transform: scale(0.9);
+  fill: #ffffff; /* White for hover */
+}

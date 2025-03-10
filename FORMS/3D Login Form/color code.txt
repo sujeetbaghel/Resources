@@ -1,0 +1,7 @@
+inear-gradient(90deg, #ba99ff, #abd8ff 50%, #8bfaeb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2rem; /* Adjust as needed */
+            font-weight: bold;
+        
+

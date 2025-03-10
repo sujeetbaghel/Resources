@@ -1,0 +1,96 @@
+body {
+    background-color: #1e1e1e;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: linear-gradient(145deg, #2b2b2b, #1a1a1a);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.9),
+                -15px -15px 30px rgba(255, 255, 255, 0.03);
+    width: 350px;
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    margin: 30px 0;
+}
+
+.input {
+    width: calc(100% - 30px);
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color: #252525;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.8),
+                inset -3px -3px 8px rgba(255, 255, 255, 0.05);
+}
+
+.input:focus,
+.input:valid {
+    border: 2px solid #3b3b3b;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.7),
+                inset -3px -3px 8px rgba(255, 255, 255, 0.08);
+}
+
+.label {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    color: #666;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input:focus ~ .label,
+.input:valid ~ .label {
+    transform: translate(-10px, -30px);
+    font-size: 12px;
+    color: #bbb;
+}
+
+.btn {
+    background: linear-gradient(145deg, #3b3b3b, #292929);
+    border: none;
+    color: white;
+    padding: 12px 0;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8),
+                -5px -5px 15px rgba(255, 255, 255, 0.03);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #4a4a4a, #3a3a3a);
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+.container {
+    width: 90%;
+    margin: 20px;
+    padding: 30px;
+}
+
+.input {
+    width: 90%;
+}
+
+h2{
+    font-size: 21px;
+}
+}

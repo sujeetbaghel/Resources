@@ -1,0 +1,102 @@
+body {
+    background-color: #121212; /* Deep black background for dark mode */
+    color: #e0e0e0; /* Light grey text for visibility */
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+.toggle:before {
+    content: "";
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); 
+    border-radius: 84.5px;
+    background: #ffffff;
+    opacity: 0.08; /* Softer glow for dark mode */
+    position: absolute;
+    margin-left: -36px;
+    margin-top: -36px;
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+}
+
+.toggle .button {
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    background: #252525; 
+    box-shadow: 
+        0 15px 25px -4px rgba(0, 0, 0, 1), 
+        inset 0 -3px 4px -1px rgba(0, 0, 0, 0.9), 
+        0 -10px 15px -1px rgba(255, 255, 255, 0.1), 
+        inset 0 3px 4px -1px rgba(255, 255, 255, 0.08), 
+        inset 0 0 5px 1px rgba(255, 255, 255, 0.1), 
+        inset 0 20px 30px 0 rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    position: absolute; 
+    margin-left: -34.4px;
+    margin-top: -34.4px;
+    display: block;
+    height: 68.8px;
+    width: 68.8px;
+    left: 50%;
+    top: 50%;
+}
+
+.toggle .label {
+    transition: color 300ms ease-out;
+    line-height: 101px;
+    text-align: center;
+    position: absolute;
+    font-weight: 700;
+    font-size: 28px;
+    display: block;
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+    color: #f0f0f0; /* Brighter text for contrast */
+}
+
+.toggle input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.toggle input:active ~ .button {
+    filter: blur(0.5px);
+    background: #3a3a3a;
+}
+
+.toggle input:active ~ .label {
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.toggle input:checked ~ .button {
+    background: #1a1a1a; /* Darker for clicked state */
+    box-shadow: 
+        0 12px 25px -4px rgba(0, 0, 0, 1), 
+        inset 0 -8px 30px 1px rgba(255, 255, 255, 0.08), 
+        0 -10px 15px -1px rgba(255, 255, 255, 0.1), 
+        inset 0 8px 25px 0 rgba(0, 0, 0, 0.8), 
+        inset 0 0 10px 1px rgba(255, 255, 255, 0.15);
+}
+
+.toggle input:checked ~ .label {
+    color: #a70404;
+}

@@ -1,0 +1,31 @@
+body {
+    margin: 80px auto;
+    width: 60%;
+    background: #212020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures full-screen height for better visual impact */
+}
+
+button {
+    color: #e8e8e8; /* Inverted text color */
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #212121; /* Dark background for button */
+    cursor: pointer;
+    border: 1px solid #212121;
+    transition: all 0.3s;
+    
+    /* Inverted shadow effect */
+    box-shadow: 6px 6px 12px #000000, -6px -6px 12px #2e2e2e;
+}
+
+button:hover {
+    border: 1px solid #2e2e2e;
+}
+
+button:active {
+    box-shadow: 4px 4px 12px #000000, -4px -4px 12px #2e2e2e;
+}
